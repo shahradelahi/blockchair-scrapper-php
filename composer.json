@@ -1,0 +1,64 @@
+{
+   "name": "shahradelahi/blockchair-scrapper-php",
+   "description": "A PHP library for BlockChair API",
+   "keywords": [
+      "blockchair",
+      "api",
+      "php"
+   ],
+   "license": "MIT",
+   "authors": [
+      {
+         "name": "Shahrad Elahi",
+         "email": "shahrad@litehex.com"
+      },
+      {
+         "name": "Litehex",
+         "email": "opensource@litehex.com"
+      }
+   ],
+   "minimum-stability": "dev",
+   "prefer-stable": true,
+   "require": {
+      "php": ">=8.0",
+      "ext-json": "*",
+      "ext-curl": "*",
+      "campo/random-user-agent": "^1.3",
+      "shahradelahi/easy-http": "v1.2.0",
+      "utilities-php/utilities-php": "*"
+   },
+   "require-dev": {
+      "phpunit/phpunit": "9.5.24",
+      "fakerphp/faker": "^v1.20.0"
+   },
+   "suggest": {
+      "guzzlehttp/guzzle": "Required for scraping html pages (^7.5.0)",
+      "campo/random-user-agent": "Required for random user agent (^1.3)",
+      "shahradelahi/easy-http": "Required for create and send http requests (v1.2.0)",
+      "utilities-php/utilities-php": "Required for some utilities (*)"
+   },
+   "autoload": {
+      "psr-4": {
+         "BlockChair\\": "src/"
+      }
+   },
+   "autoload-dev": {
+      "psr-4": {
+         "BlockChair\\Tests\\": "tests/"
+      }
+   },
+   "scripts": {
+      "test": "phpunit --configuration ./phpunit.xml --teamcity --colors=always",
+      "test-coverage": "phpunit --coverage-html ./coverage",
+      "test-coverage-clover": "phpunit --coverage-clover ./coverage.xml"
+   },
+   "support": {
+      "issues": "https://github.com/shahradelahi/blockchair-scrapper-php/issues",
+      "source": "https://github.com/shahradelahi/blockchair-scrapper-php",
+      "docs": "https://github.com/shahradelahi/blockchair-scrapper-php/blob/master/README.md"
+   },
+   "config": {
+      "sort-packages": true,
+      "optimize-autoloader": true
+   }
+}
